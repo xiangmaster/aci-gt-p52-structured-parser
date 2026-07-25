@@ -1,0 +1,10 @@
+id: P52-E04
+repository: aci-gt-p52-structured-parser
+visibility: public
+stage: P5
+rule: P5.2
+kind: experiment
+atomic_variable: "JSON/YAML parser 自动读取输出"
+expected_status: REACHABLE
+setup: AUTO_FILES
+configuration_state: COMPLETE
