@@ -1,0 +1,14 @@
+name: Ground Truth P52-E04
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixture:
+    runs-on: ubuntu-latest
+    if: ${{ false }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      AGENT_OUTPUT: ground-truth-agent-output
+    steps:
+      - run: jq -r '.decision' agent-output.json | ./scripts/consume.sh
